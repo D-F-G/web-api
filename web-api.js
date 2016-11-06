@@ -1,5 +1,3 @@
-require('string.prototype.endswith');
-require('string.prototype.startswith');
 var _ = require('lodash');
 var bodyParser = require('body-parser')
 
@@ -15,7 +13,7 @@ module.exports.register = function(app, controllerList, prefix){
   function registerController(controller){
     var controllerName = functionName(controller);
     
-    if(controllerName.endsWith('Controller')){
+    if(_.endsWith(controllerName, 'Controller')){
       controllerName = controllerName.substring(0, controllerName.length - 10);
     }
     
@@ -24,13 +22,13 @@ module.exports.register = function(app, controllerList, prefix){
     _.each(_.keys(cont), function(name){
       var route = prefix + '/' + controllerName + '/';
       
-      if(name.startsWith('post')) {
+      if(_.startsWith(name, 'post')) {
         registerRoute('post', route + name.substring(4), cont[name]);
-      } else if(name.startsWith('put')) {
+      } else if(_.startsWith(name, 'put')) {
         registerRoute('put', route + name.substring(3), cont[name]);
-      } else if(name.startsWith('delete')) {
+      } else if(_.startsWith(name, 'delete')) {
         registerRoute('delete', route + name.substring(6), cont[name]);
-      } else if(name.startsWith('get')) {
+      } else if(_.startsWith(name, 'get')) {
         registerRoute('get', route + name.substring(3), cont[name]);
       }
     });

@@ -1,18 +1,28 @@
 {
   "name": "node-web-api",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "description": ".Net like Web Api for node.js",
   "main": "web-api.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [
+    "web api",
+    ".net",
+    "c#",
+    "REST",
+    "RESTful",
+    "Web Service",
+    "express"
+  ],
+  "bugs": {
+    "url": "https://github.com/DominikFG/web-api/issues"
+  },
+  "homepage": "https://github.com/DominikFG/web-api",
   "author": "Dominik Greibl",
   "license": "MIT",
   "dependencies": {
     "express": "^4.14.0",
-    "foreach": "^2.0.5",
-    "lodash": "^4.16.6",
-    "string.prototype.endswith": "^0.2.0",
-    "string.prototype.startswith": "^0.2.0"
+    "lodash": "^4.16.6"
   }
 }
