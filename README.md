@@ -40,11 +40,15 @@ app.listen(8000, function(){
 Routes are convention based. (Manual configuration of routes is planned for future releases.)
 
 The conventions are as follows. 
+
 Controller functions/classes are either postfixed with "Controller" or are used as-is. In the example above, testController is resolved as route "test", while "hello" is resolved as route "hello".
+
 Service methods are prefixed by the method used. Currently supported methods are "GET", "POST", "PUT", "DELETE".
+
 Service methods are called with 4 parameters, the request, the response, the URL parameters and the (parsed JSON) body.
 
 ### Installation
 
 Either download the project here or install via npm 
+
 `npm install --save node-web-api`
