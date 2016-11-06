@@ -5,7 +5,7 @@
 
 ```javascript
 var express = require('express');
-var webApi = require('web-api');
+var webApi = require('node-web-api');
 
 function testController(){ // Route "/test"
   this.getHelloWorld = function(req, res){ //Route "/test/HelloWorld" for GET requests
