@@ -1,4 +1,4 @@
-# web-api
+# node-web-api
 .Net like, convention based web API for node express
 
 ## Example
